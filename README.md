@@ -12,7 +12,7 @@ This technique enhances stealth by hiding the malicious payload in memory and ex
 - Encryption of Executables: Converts executable files into encrypted listings for secure storage and transfer.
 - In-Memory Decryption: Decrypts the executable code in memory to avoid detection by traditional file-based antivirus solutions.
 - Process Injection: Injects the decrypted executable code into legitimate processes, enhancing stealth and bypassing security mechanism
-- User-Friendly Interface: Easy-to-use GUI for building and managing stubs and payloads.
+- User-Friendly Interface: Easy-to-use GUI for building and managing.
 
 ## 📷 Video-Proof:
 https://github.com/user-attachments/assets/312c4b5d-79ee-44ae-bf76-c7a5a2826a6d
