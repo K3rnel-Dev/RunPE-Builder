@@ -61,8 +61,6 @@ namespace RunPEBuilder.Include
                         method.Name = RandomUtils.RandomString(40);
                     }
                 }
-
-                // Write the modified module to the specified output path
                 module.Write(outPath);
             }
             catch (Exception ex)

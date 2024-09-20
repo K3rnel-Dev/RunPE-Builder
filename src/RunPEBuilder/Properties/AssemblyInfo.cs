@@ -5,13 +5,13 @@ using System.Runtime.InteropServices;
 // Общие сведения об этой сборке предоставляются следующим набором
 // набора атрибутов. Измените значения этих атрибутов для изменения сведений,
 // связанных со сборкой.
-[assembly: AssemblyTitle("RunPEBuilder by K3rnel-Dev")]
-[assembly: AssemblyDescription("RunPEBuilder by K3rnel-Dev")]
+[assembly: AssemblyTitle("* / RunPE Builder v.2 by K3rnel-Dev * /")]
+[assembly: AssemblyDescription("* / RunPE Builder v.2 by K3rnel-Dev * /")]
 [assembly: AssemblyConfiguration("")]
-[assembly: AssemblyCompany("RunPEBuilder by K3rnel-Dev")]
-[assembly: AssemblyProduct("RunPEBuilder by K3rnel-Dev")]
-[assembly: AssemblyCopyright("RunPEBuilder by K3rnel-Dev")]
-[assembly: AssemblyTrademark("RunPEBuilder by K3rnel-Dev")]
+[assembly: AssemblyCompany("* / RunPE Builder v.2 by K3rnel-Dev * /")]
+[assembly: AssemblyProduct("* / RunPE Builder v.2 by K3rnel-Dev * /")]
+[assembly: AssemblyCopyright("* / RunPE Builder v.2 by K3rnel-Dev * /")]
+[assembly: AssemblyTrademark("* / RunPE Builder v.2 by K3rnel-Dev * /")]
 [assembly: AssemblyCulture("")]
 
 // Установка значения False для параметра ComVisible делает типы в этой сборке невидимыми
